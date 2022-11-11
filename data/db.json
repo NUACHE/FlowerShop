@@ -1,0 +1,131 @@
+{
+  "flowers": [
+    {
+      "id": "0",
+      "name": "Daisy",
+      "url": "https://images.pexels.com/photos/669508/pexels-photo-669508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "01/04/2022",
+      "title": "With a name meaning day's eye",
+      "body": "This pretty flower is known for it's longevity and is very representative when used as a gift.",
+      "price": "9"
+    },
+    {
+      "id": "1",
+      "name": "Dahlia",
+      "url": "https://images.pexels.com/photos/1369068/pexels-photo-1369068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Best flowers for homes",
+      "body": "It is a tuberous perennial flower that is native to Mexico and South America 😊",
+      "price": "3"
+    },
+    {
+      "id": "2",
+      "name": "Sunflower",
+      "url": "https://images.pexels.com/photos/64221/flower-sunflower-karnataka-india-64221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Best flowers for homes",
+      "body": "All the flowers are best for your lovely house just get the one you love the most 😊",
+      "price": "7"
+    },
+    {
+      "id": "3",
+      "name": "Rose",
+      "url": "https://images.pexels.com/photos/60909/rose-yellow-flower-petals-60909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Orange and white tinted roses",
+      "body": "Perfect for homes or bouquets",
+      "price": "30"
+    },
+    {
+      "id": "4",
+      "name": "Tulip",
+      "url": "https://images.pexels.com/photos/39517/rose-flower-blossom-bloom-39517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Scientific Name: Tulipa",
+      "body": "This flower is closely related to the lily with a long history of cultivation.",
+      "price": "30"
+    },
+    {
+      "id": "5",
+      "name": "Rose",
+      "url": "https://images.pexels.com/photos/236259/pexels-photo-236259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Not all roses are red",
+      "body": "This combination shows the pain and pleasure that comes with roses. ",
+      "price": "5"
+    },
+    {
+      "id": "6",
+      "name": "Lily",
+      "url": "https://images.pexels.com/photos/1055756/pexels-photo-1055756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Lillium Tall",
+      "body": "Great scent, striking shape, majestic and beautiful. The lily stands tall amongst all flowers. ",
+      "price": "15"
+    },
+    {
+      "id": "7",
+      "name": "Magnolia",
+      "url": "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "A french flower",
+      "body": "As beautiful as paris, no other flower perfectly represent french",
+      "price": "8"
+    },
+    {
+      "id": "8",
+      "name": "Carnation",
+      "url": "https://images.pexels.com/photos/158302/dahlia-flower-plant-nature-158302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Perfect for bouquets for loved ones",
+      "body": "They like wet soils, hence why they are called Bog Sage.",
+      "price": "4"
+    },
+    {
+      "id": "9",
+      "name": "Lotus",
+      "url": "https://images.pexels.com/photos/46231/water-lilies-pink-water-lake-46231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "02/04/2022",
+      "title": "Nelumbo nucifera",
+      "body": "The lotus is wide-famed and is found is ponds. Just look around your backyard.",
+      "price": "5"
+    },
+    {
+      "id": "10",
+      "name": "WRF",
+      "url": "https://images.pexels.com/photos/696996/pexels-photo-696996.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "",
+      "title": "Outdoor scented",
+      "body": "These white and red flowers are best during spring. Use them outdoors for decoration. ",
+      "price": "6"
+    },
+    {
+      "id": "11",
+      "name": "Peachy",
+      "url": "https://images.pexels.com/photos/1167050/pexels-photo-1167050.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "09/11/2022",
+      "title": "Highly scented Flowers",
+      "body": "Use this flowers to leave an amazing smell in your room.",
+      "price": "20"
+    },
+    {
+      "id": "12",
+      "name": "Poppy",
+      "url": "https://images.pexels.com/photos/70741/cereals-field-ripe-poppy-70741.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "date": "09/11/2022",
+      "title": "A beautiful ripe poppy flower",
+      "body": "Could be a rose or another flower...no one knows.",
+      "price": "14"
+    },
+    
+    {
+      "name": "Violet",
+      "url": "https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg?auto=compress&cs=tinysrgb&w=600",
+      "date": "09/11/2022",
+      "title": "Violet as a girls' name",
+      "body": "Violet as it's name suggests",
+      "price": "12",
+      "id": "a43PviQ"
+    }
+  ]
+}
