@@ -96,8 +96,7 @@ export const counterSlice = createSlice({
                     //update local storage
                   localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice)); 
 
-                
-             
+                        
     
             }
         
