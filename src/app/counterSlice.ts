@@ -140,7 +140,7 @@ export const counterSlice = createSlice({
             }    
         },
         add: (state, cartItem) => {
-            // console.log(cartItem.payload);
+         
 
             if (containsObject(cartItem.payload, state.cart) === true) {
                 Swal.fire('Item already added to cart')
