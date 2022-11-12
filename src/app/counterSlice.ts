@@ -17,8 +17,8 @@ const initialState : CounterState = {
     value: 0,
     totalCount: 0,
     cart:localStorage.getItem('cart') === null?  []: localStorage.getItem('cart') === ''? []:  JSON.parse(localStorage.getItem('cart')!) ,
-    numberofFlowers: 0,
-    totalPrice: 0,
+    numberofFlowers: localStorage.getItem('totalQuantity') === null?  0: localStorage.getItem('totalQuantity') === ''? 0:  JSON.parse(localStorage.getItem('totalQuantity')!) ,
+    totalPrice: localStorage.getItem('totalPrice') === null?  0: localStorage.getItem('totalPrice') === ''? 0:  JSON.parse(localStorage.getItem('totalPrice')!) ,
 }
 
 function containsObject(obj: addedObject, list: addedObject[]) {
@@ -91,6 +91,10 @@ export const counterSlice = createSlice({
                 console.log(state.numberofFlowers);
                   //update local storage
                   localStorage.setItem("cart", JSON.stringify(state.cart)); 
+                   //update local storage
+                   localStorage.setItem("totalQuantity", JSON.stringify(state.numberofFlowers)); 
+                    //update local storage
+                  localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice)); 
 
                 
              
@@ -128,6 +132,10 @@ export const counterSlice = createSlice({
 
                   //update local storage
                   localStorage.setItem("cart", JSON.stringify(state.cart)); 
+                    //update local storage
+                    localStorage.setItem("totalQuantity", JSON.stringify(state.numberofFlowers)); 
+                    //update local storage
+                  localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice)); 
     
             }    
         },
@@ -156,6 +164,10 @@ export const counterSlice = createSlice({
                 }
                   //update local storage
                   localStorage.setItem("cart", JSON.stringify(state.cart)); 
+                    //update local storage
+                    localStorage.setItem("totalQuantity", JSON.stringify(state.numberofFlowers)); 
+                    //update local storage
+                  localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice)); 
 
                 Swal.fire({
                     
@@ -200,6 +212,10 @@ export const counterSlice = createSlice({
                 }
                 //update local storage
                 localStorage.setItem("cart", JSON.stringify(state.cart)); 
+                  //update local storage
+                  localStorage.setItem("totalQuantity", JSON.stringify(state.numberofFlowers)); 
+                  //update local storage
+                localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice)); 
     
             }
         }

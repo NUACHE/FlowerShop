@@ -6,6 +6,7 @@ import { decrement, increment } from '../../app/counterSlice';
 import { RootState } from '../../app/store';
 import { useEffect } from "react";
 import { addedObject } from "../../utils/interfaces";
+import Swal from "sweetalert2";
 
 
 
@@ -21,7 +22,7 @@ const CartPage = () => {
     return (
         <div>
             <NavBar />
-            <div className="flex flex-row justify-center flex-wrap mx-2 mt-5 ">
+            {cart.length < 1 ? <div className="flex justify-center mt-60">No Items Added to Cart</div>: <div className="flex flex-row justify-center flex-wrap mx-2 mt-5 ">
 
                 <div className="flex w-5/6 lg:w-4/6  mb-5">
 
@@ -52,10 +53,16 @@ const CartPage = () => {
                 <div className="rounded-md bg-white ml-2 h-full mb-4 px-4 flex flex-col items-center">
                     <p className="py-2">Subtotal for {totalFlowers} item(s): ${totalPrice}</p>
 
-                    <button className="bg-orange-500  py-1 px-4 rounded-md m-2  text-white ">Checkout</button>
+                    <button onClick={()=> Swal.fire({
+                    
+                    icon: 'success',
+                    title: 'Order Completed',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }) } className="bg-orange-500  py-1 px-4 rounded-md m-2  text-white ">Checkout</button>
                 </div>
 
-            </div>
+            </div>}
 
         </div>
     );
