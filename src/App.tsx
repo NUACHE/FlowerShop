@@ -9,6 +9,8 @@ import ShopPage from './features/shop/shopPage';
 import CartPage from './features/cart/cartPage';
 import Admin from './features/admin/admin';
 import FlowerDetails from './features/shop/flowerDetailsPage';
+import SearchPage from './features/search/search';
+import NotFound from './components/404';
 
 function App() {
   return (
@@ -18,9 +20,12 @@ function App() {
           {/* PAGE ROUTES */}
           <Route path={'/'} element = {<Home/>}/>
           <Route path={'/shop'} element = {<ShopPage/>}/>
+          <Route path={'/search/:searchedFlower'} element = {<SearchPage/>}/>
           <Route path={'/details/:id'} element = {<FlowerDetails/>}/>
           <Route path={'/cart'} element = {<CartPage/>}/>
           <Route path={'/admin'} element = {<Admin/>}/>
+          <Route path={'*'} element = {<NotFound/>}/>
+
                   </Routes>
       </BrowserRouter>
     </div>
