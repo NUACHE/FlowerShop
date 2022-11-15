@@ -1,27 +1,33 @@
 import NavBar from "../../components/navbar";
-import { useLocation, useParams } from 'react-router-dom'
+import { useSearchParams, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
 import BuyFlowers from "../home/components/buyFlowers";
 import { rawData } from "../../utils/interfaces";
 
 const SearchPage = () => {
-    const { searchedFlower } = useParams<string>();
+    
     const [data, setData] = useState<rawData[]>();
     const [filterInput, setFilterInput] = useState(false);
     const [searchResults, setSearchResults] = useState<rawData[]>([]);
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    console.log(searchParams.get('search'));
+    
     
 
     useEffect(() => {
         fetch('http://localhost:8000/flowers').then(res => {
             return res.json();
         }).then(data => {
-
+    //    setSearchParams({filter: searchedFlower!});
             console.log(data);
-            console.log(`searrhr ${searchedFlower}`);
-            if(searchedFlower === ''){
+            console.log(`searrhr worss ${searchParams.get('search')}`);
+            if(searchParams.get('search') === '' || searchParams.get('search') === undefined || searchParams.get('search') === null){
               var  filteredValue = data;
+              setSearchResults(filteredValue);
+              setFilterInput(true);
             }else{
-            var filteredValue = data.filter((cartItem: rawData) => cartItem.name.toLowerCase().includes(searchedFlower!.toString().toLowerCase()));
+            var filteredValue = data.filter((cartItem: rawData) => cartItem.name.toLowerCase().includes(searchParams.get('search')!.toString().toLowerCase()));
                 setSearchResults(filteredValue);
                 setFilterInput(true);
 
@@ -31,7 +37,7 @@ const SearchPage = () => {
             // search(searchedFlower!)
             }
         })
-    }, [searchedFlower]);
+    }, [searchParams.get('search')]);
 
     function search(e: string) {
         

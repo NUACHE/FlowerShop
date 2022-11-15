@@ -19,8 +19,8 @@ function App() {
         <Routes>
           {/* PAGE ROUTES */}
           <Route path={'/'} element = {<Home/>}/>
-          <Route path={'/shop'} element = {<ShopPage/>}/>
-          <Route path={'/search/:searchedFlower'} element = {<SearchPage/>}/>
+          {/* <Route path={'/shop'} element = {<ShopPage/>}/> */}
+          <Route path={'/products'} element = {<SearchPage/>}/>
           <Route path={'/details/:id'} element = {<FlowerDetails/>}/>
           <Route path={'/cart'} element = {<CartPage/>}/>
           <Route path={'/admin'} element = {<Admin/>}/>
