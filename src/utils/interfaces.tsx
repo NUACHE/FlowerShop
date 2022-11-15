@@ -17,6 +17,7 @@ export interface flowerDetails {
         flowerBody:string, 
         flowerPrice:string,
         flowerQty: number,
+        flowerCategory:string,
        
   }
 
@@ -30,6 +31,7 @@ export interface flowerDetails {
     body:string, 
     price:string,
     qty:number,
+    category:string,
     
     }
 
