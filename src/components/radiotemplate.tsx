@@ -1,28 +1,57 @@
-import { useState } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useState, } from 'react'
 import { RadioGroup } from '@headlessui/react'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../app/store';
+import { setFilter } from '../app/counterSlice';
 
 const plans = [
   {
-    name: 'Annual',
+    name: 'Annuals',
    
   },
   {
-    name: 'Biennial',
+    name: 'Biennials',
    
   },
   {
-    name: 'Perennial',
+    name: 'Perennials',
    
   },
 ]
 
-export default function RadioTemplate() {
-  const [selected, setSelected] = useState(plans[0])
+
+
+const RadioTemplate = forwardRef((props, ref) => {
+  
+  useImperativeHandle(ref, () => ({
+    test: () => {
+       setSelected(null);
+       dispatch(setFilter(4))
+    }
+ }));
+  const filters = useSelector((state: RootState) => state.counter.filter);
+  const [selected, setSelected] = useState<any>();
+
+
+ 
+
+ 
+ 
+
+  useEffect(()=>{
+    const [value] = filters;
+    setSelected(plans[filters[0]]);
+   // setSelected({name: 'Annual'})
+   console.log(`this is for filters ${filters[0]}`)
+    console.log(`this is vals ${value}`);
+  },[]);
+    
+    const dispatch = useDispatch();
 
   return (
     <div className=" px-1 py-2">
       <div className="mx-auto  ">
-        <RadioGroup value={selected} onChange={setSelected}>
+        <RadioGroup value={selected} onChange={(value:any)=>{console.log(`this is selected ${selected}`); console.log(`this is value ${value}`); setSelected(value); dispatch(setFilter(plans.indexOf(value)))}}>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="space-y-3">
             {plans.map((plan) => (
@@ -72,7 +101,7 @@ export default function RadioTemplate() {
       </div>
     </div>
   )
-}
+})
 
 function CheckIcon(props:any) {
   return (
@@ -88,3 +117,7 @@ function CheckIcon(props:any) {
     </svg>
   )
 }
+ 
+export default RadioTemplate;
+
+

@@ -9,6 +9,7 @@ export interface CounterState {
     numberofFlowers:number;
     totalPrice: number;
     totalCount:number;
+    filter :any,
 }
 
 
@@ -19,6 +20,8 @@ const initialState : CounterState = {
     cart:localStorage.getItem('cart') === null?  []: localStorage.getItem('cart') === ''? []:  JSON.parse(localStorage.getItem('cart')!) ,
     numberofFlowers: localStorage.getItem('totalQuantity') === null?  0: localStorage.getItem('totalQuantity') === ''? 0:  JSON.parse(localStorage.getItem('totalQuantity')!) ,
     totalPrice: localStorage.getItem('totalPrice') === null?  0: localStorage.getItem('totalPrice') === ''? 0:  JSON.parse(localStorage.getItem('totalPrice')!) ,
+    filter: [4],
+
 }
 
 function containsObject(obj: addedObject, list: addedObject[]) {
@@ -217,12 +220,17 @@ export const counterSlice = createSlice({
                 localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice)); 
     
             }
+        },
+        setFilter:(state,value) =>{
+            console.log(state.filter);
+            console.log(value.payload);
+            state.filter[0] = value.payload;
         }
 
 
     }
 })
 
-export const { increment, decrement, add, remove, } = counterSlice.actions
+export const { increment, decrement, add, remove, setFilter} = counterSlice.actions
 
 export default counterSlice.reducer
