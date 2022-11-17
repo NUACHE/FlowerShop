@@ -35,6 +35,7 @@ function sortByCategory(value:string, data:rawData[]){
         filteredValue = data.filter((cartItem: rawData) => cartItem.category.toLowerCase().includes(value.toString().toLowerCase()));
         setSearchResults(filteredValue);
         setFilterInput(true);
+        
     }
     else{
         filteredValue = data;
@@ -42,19 +43,36 @@ function sortByCategory(value:string, data:rawData[]){
         setFilterInput(true);
     }
 
+    setSearchParams({query:searchParams.get('query')!.toString(),category: value, })
+
     return filteredValue;
+}
+
+function sortByRange(rangeOfValues : number[], processedData: rawData[]){
+    var filteredValue: rawData[];
+    filteredValue = processedData.filter((cartItem: rawData) => (parseInt(cartItem.price) >= rangeOfValues[0]) && parseInt(cartItem.price) <= rangeOfValues[1] );
+    setSearchResults(filteredValue);
+    setFilterInput(true);
+    // setSearchParams({range: rangeOfValues.toString()})
+    setSearchParams({query:searchParams.get('query')!.toString(),category: searchParams.get('category')!.toString(),
+range: rangeOfValues.toString()
+})
+    
 }
 
 
     async function sortData(value: string, rangeVal : number[]) {
-        console.log(value);
+        console.log(`this is for rangeVal ${rangeVal} the first is ${rangeVal[0]} and second is ${rangeVal[1]}`);
         setFilterCategory(value);
         console.log(`this is filtered ${filterCategory}`);
         var filteredValue: rawData[];
 
        
             if (data) {
-               await sortByCategory(value, data);
+            var results =   await sortByCategory(value, data);
+               await sortByRange(rangeVal, results)
+
+
         
         }
       
@@ -69,15 +87,21 @@ function sortByCategory(value:string, data:rawData[]){
             console.log(data);
 
             console.log(`searrhr worss ${searchParams.get('query')}`);
+            console.log(`searrhr worss ${searchParams.get('category')}`);
             if (searchParams.get('query') === '' || searchParams.get('query') === undefined || searchParams.get('query') === null) {
                 var filteredValue = data;
                 setSearchResults(filteredValue);
                 setData(filteredValue);
                 setFilterInput(true);
             } else {
-
-                var filteredValue = data.filter((cartItem: rawData) => cartItem.name.toLowerCase().includes(searchParams.get('query')!.toString().toLowerCase()));
-                setData(filteredValue);
+                var filteredValue = data.filter((cartItem: rawData) => {
+                    var pattern1 = `\[${cartItem.name.toLowerCase()}\]`;
+                    if(searchParams.get('query')!.toString().toLowerCase().match(new RegExp(pattern1, 'g'))?.length! >= searchParams.get('query')!.toString().length){
+                        console.log(`tadaaa ${cartItem.name}`);
+                        return cartItem;
+                   
+                    }})
+                   setData(filteredValue);
                 console.log(`the filter category is ${filterCategory}`)
                 if(filterCategory !== "All"){
                     filteredValue = filteredValue.filter((cartItem: rawData) => cartItem.category.toLowerCase().includes(filterCategory.toString().toLowerCase()));

@@ -70,7 +70,9 @@ if(window.location.pathname.includes( '/products/') === true){
       <div className="flex">
       <strong className="hover:cursor-pointer relative inline-flex items-center rounded border border-transparent px-2.5 py-1.5 text-xs font-medium">
       
-      <AiOutlineSearch onClick={()=> setSearch(!search)} className={" "+  (search === true ? "text-orange-500" : "text-black") } size={"20px"} />
+      <AiOutlineSearch onClick={()=>{ setSearch(!search); 
+        var pattern1 = /[can]/
+        console.log('na'.match(new RegExp(pattern1, 'g'))?.length);}} className={" "+  (search === true ? "text-orange-500" : "text-black") } size={"20px"} />
       </strong>
       <Link to={'/cart'}>
         <strong className="relative inline-flex items-center rounded border border-transparent px-2.5 py-1.5 text-xs font-medium">
