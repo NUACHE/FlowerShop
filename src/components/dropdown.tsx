@@ -98,12 +98,12 @@ export default function MyModal(props:any) {
                   as="h3"
                   className=" flex justify-between text-lg font-medium leading-6 text-gray-900"
                 >
-                 <div>Filter</div>
+                 <div>Sort & Filter</div>
                  <div onClick={()=>{
                 //Reset categories
                   childRef?.current?.test();
                   setValue([0,100])
-                  }} className="text-sm mt-1 text-gray-500 underline">
+                  }} className="text-sm mt-1 text-gray-500 underline hover:cursor-pointer">
                 
                     Clear
                   
