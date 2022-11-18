@@ -140,6 +140,60 @@
       "price": "12",
       "id": "a43PviQ", 
       "category": "Perennials"
+    },
+    
+    {
+      "name": "Iris",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Iris_germanica_%28Purple_bearded_Iris%29%2C_Wakehurst_Place%2C_UK_-_Diliff.jpg",
+      "date": "18/11/2022",
+      "title": "Fun fact, it's scientific name is Iris",
+      "body": "Iris is a flowering plant genus of 310 accepted species with showy flowers. They are closely related",
+      "price": "42",
+      "id": "13", 
+      "category": "Annuals"
+    }
+    ,
+    
+    {
+      "name": "Daffodil",
+      "url": "http://cdn.shopify.com/s/files/1/1902/7917/products/DaffodilFortissimo2021-Portrait.jpg?v=1617279021",
+      "date": "18/11/2022",
+      "title": "A narcist amongst flowers",
+      "body": "Narcissus is a genus of predominantly spring flowering perennial plants",
+      "price": "22",
+      "id": "14", 
+      "category": "Perennials"
+    },
+    
+    {
+      "name": "Marigold",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Tagetes_erecta_chendumalli_chedi.jpg",
+      "date": "18/11/2022",
+      "title": "Marigold flowers are also called Target erecta",
+      "body": "This flower is generally used for some ritual purpose or decoration",
+      "price": "99",
+      "id": "15", 
+      "category": "Annuals"
+    },
+    {
+      "name": "Chrysanthemum",
+      "url": "https://cdn.britannica.com/09/174809-050-CA9F8F8C/daisy-mums-ray-flowers-disk-centre.jpg",
+      "date": "18/11/2022",
+      "title": "Chrysanthemum indicum the popular",
+      "body": "Sometimes called mums, chrysanths or garden mom,  they are very popular ",
+      "price": "3",
+      "id": "16", 
+      "category": "Biennials"
+    },
+    {
+      "name": "Hyacinth",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Hyacinth_-_Anglesey_Abbey.jpg",
+      "date": "18/11/2022",
+      "title": "Hyacinthus is a small genus of bulbous perennials",
+      "body": "These flowers are very fragrant and are found in the eastern mediterranean",
+      "price": "25",
+      "id": "17", 
+      "category": "Perennials"
     }
   ]
 }

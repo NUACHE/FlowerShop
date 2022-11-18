@@ -4,8 +4,8 @@ import { ChevronRightIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 import RadioTemplate from './radiotemplate'
 import { Slider } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../app/store';
-import { setFilter } from '../app/counterSlice';
+import { RootState } from '../features/store';
+import { setFilter } from '../features/counterSlice';
 
 function valuetext(value: number) {
   return `${value}°C`;

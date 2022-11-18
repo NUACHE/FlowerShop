@@ -2,15 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from './components/navbar';
-import Home from './features/home/home';
-import Footer from './components/footer';
-import ShopPage from './features/shop/shopPage';
-import CartPage from './features/cart/cartPage';
-import Admin from './features/admin/admin';
-import FlowerDetails from './features/shop/flowerDetailsPage';
-import SearchPage from './features/search/search';
-import NotFound from './components/404';
+import Home from './pages/home/home';
+import CartPage from './pages/cart/cartPage';
+import Admin from './pages/admin/admin';
+import FlowerDetails from './pages/search/flowerDetailsPage';
+import SearchPage from './pages/search/search';
+import NotFound from './global-components/404';
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import { forwardRef, useEffect, useImperativeHandle, useState, } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../app/store';
-import { setFilter } from '../app/counterSlice';
+import { RootState } from '../features/store';
+import { setFilter } from '../features/counterSlice';
 
 const plans = [
   {
